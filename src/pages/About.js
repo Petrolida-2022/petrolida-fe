@@ -22,7 +22,7 @@ const About = () => {
   return (
     <div className={style.body}>
       {/* <!-- nav --> */}
-      <Navbar/>
+      <Navbar currentPage={'about'}/>
       {/* <!-- /end nav --> */}
 
       {/* Main Section */}
@@ -40,7 +40,7 @@ const About = () => {
       {/* End of main section */}
 
       {/* Image section */}
-      <div className={`position-relative ${style.imgContainer}`}>
+      <div className={`position-relative ${style.imgContainer} container`}>
         <div style={{background:"linear-gradient(to top, rgba(255,255,255,0), #1B2845 85%), url(https://images.unsplash.com/photo-1629540946404-ebe133e99f49?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1403&q=80) center"}} className={style.img1} data-aos="fade-right"> 
         </div>
         <div style={{background:"linear-gradient(to top, rgba(255,255,255,0), #1B2845 85%), url(https://images.unsplash.com/photo-1511174511562-5f7f18b874f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80) center"}} className={style.img2} data-aos="fade-right"> 
@@ -52,7 +52,7 @@ const About = () => {
         <div style={{background:"linear-gradient(to top, rgba(255,255,255,0), #1B2845 85%), url(https://images.unsplash.com/photo-1624996379671-b4d0837e45cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80) center"}} className={style.img4} data-aos="fade-left"> 
         </div>
         
-        <div style={{background:"linear-gradient(to top, rgba(255,255,255,0), #1B2845 85%), url(https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80) center", left: '1140px', top: '80px'}} className={style.img5} data-aos="fade-left"> 
+        <div style={{background:"linear-gradient(to top, rgba(255,255,255,0), #1B2845 85%), url(https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80) center", left: '1040px', top: '80px'}} className={style.img5} data-aos="fade-left"> 
         </div>
 
       </div>
@@ -60,7 +60,7 @@ const About = () => {
       <section className={`${style.goalSection} container`}>
         <h3>What our goals</h3>
         <div className='row justify-content-between p-2'>
-          <div className={`col-sm-auto position-relative ${style.goal}`} data-aos="fade-right">
+          <div className={`col-sm mx-2 position-relative ${style.goal}`} data-aos="fade-right">
             <h3>
               01.
             </h3>
@@ -68,7 +68,7 @@ const About = () => {
             To serve as a platform for university undergraduate students to create and innovate regarding today’s energy issues.
             </div>
           </div>
-          <div className={`col-sm-auto position-relative ${style.goal}`} data-aos="fade-right">
+          <div className={`col-sm mx-2 position-relative ${style.goal}`} data-aos="fade-right">
             <h3>
               02.
             </h3>
@@ -76,7 +76,7 @@ const About = () => {
             To give substantial and competitive experience for students to excel and showcase their potential.
             </div>
           </div>
-          <div className={`col-sm-auto position-relative ${style.goal}`} data-aos="fade-left">
+          <div className={`col-sm mx-2 position-relative ${style.goal}`} data-aos="fade-left">
             <h3>
               03.
             </h3>
@@ -84,7 +84,7 @@ const About = () => {
             To preserve relations with another SPE Student Chapter, stakeholders, and companies.
             </div>
           </div>
-          <div className={`col-sm-auto position-relative ${style.goal}`} data-aos="fade-left">
+          <div className={`col-sm mx-2 position-relative ${style.goal}`} data-aos="fade-left">
             <h3>
               04.
             </h3>
@@ -144,7 +144,7 @@ const About = () => {
       {/* end of qna section */}
 
       {/* socmed section */}
-      <section className='w-100 d-flex justify-content-center'>
+      <section className='w-100 d-flex justify-content-center' style={{margin: '100px 0'}}>
         <div className='container row justify-content-center'>
           <div className='col-sm-6'>
             <span style={{fontSize: '38px'}} className='fw-bold'>Follow Us</span>

@@ -47,13 +47,13 @@ const Footer = () => {
 
       <section className="sosmed-info">
         <div className="text-center">
-          <a href="#!">
+          <a href="line.me/ti/p/~@petrolida">
             <img src={bi_line} alt="Line"/>
           </a>
-          <a href="#!">
+          <a href="https://www.instagram.com/petrolida2022/">
             <img src={ig} alt="Instagram"/>
           </a>
-          <a href="#!">
+          <a href="https://www.linkedin.com/company/petroleum-integrated-days-petrolida/">
             <img src={linkedin} alt="Linkedin"/>
           </a>
         </div>

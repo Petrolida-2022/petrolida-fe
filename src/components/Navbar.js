@@ -8,7 +8,7 @@ import exit from "../assets/img/home/exit-nav.svg"
 
 import { Link } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({ currentPage }) => {
   const [toggleNavbar, setToggleNavbar] = useState(false)
   const [navbarImg, setNavbarImg] = useState(true)
 
@@ -24,7 +24,7 @@ const Navbar = () => {
           <img src={logo} className="logo" alt="Logo Petrolida" />
         </Link>
         <ul className={`d-flex animate__animated ${toggleNavbar && 'responsive animate__slideInLeft'}`} id="list-link-nav">
-          <li><Link to="/about">About</Link></li>
+          <li><Link to="/about" style={currentPage === 'about' ? {color: 'green'} : {color: 'inherit'}}>About</Link></li>
           <li>
             <Link to="/#competitions">Events</Link>
           </li>

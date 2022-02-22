@@ -3,7 +3,7 @@
   font-family: 'Poppins';
   color: white;
   padding: 0;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .mainSection{
@@ -48,22 +48,22 @@
 }
 
 .img1{
-  left: 100px;
+  left: 0;
   top: 80px;
 }
 
 .img2{
-  left: 360px; 
+  left: 260px; 
   top: 140px;
 }
 
 .img3{
-  left: 620px; 
+  left: 520px; 
   top: 100px;
 }
 
 .img4{
-  left: 880px;
+  left: 780px;
   top: 0;
 }
 
@@ -80,7 +80,7 @@
 }
 
 .goal{
-  width: 250px;
+  width: auto;
   height: 260px;
   margin: 40px 0;
   background: rgba(255, 255, 255, 0.04);
@@ -146,7 +146,9 @@
   align-items: center;
   justify-content: center;
   padding-left: 18px;
-  font-size: 40px;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 40px;
 }
 
 .followUs{

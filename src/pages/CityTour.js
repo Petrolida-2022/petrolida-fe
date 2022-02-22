@@ -3,7 +3,6 @@ import '../assets/css/style.css'
 import accordionImg from "../assets/img/business-case/accordion.svg"
 import Navbar from '../components/Navbar'
 import { useTitle } from 'react-use'
-import Footer from '../components/Footer'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -82,7 +81,7 @@ const CityTour = () => {
         </div>
       </section>
 
-      <Footer/>
+
     </div>
   )
 }
