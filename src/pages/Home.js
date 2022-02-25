@@ -4,8 +4,8 @@ import Navbar from '../components/Navbar'
 import { Link } from 'react-router-dom';
 import arrowRight from "../assets/img/home/long-arrow-right.svg"
 import sliderEnterpreneur from "../assets/img/home/slider/slider_entrepreneurship.png"
-import sliderOilGas from "../assets/img/home/slider/slide_oil_gas.png" 
-import sliderTech from "../assets/img/home/slider/slider_technology.png"
+// import sliderOilGas from "../assets/img/home/slider/slide_oil_gas.png" 
+// import sliderTech from "../assets/img/home/slider/slider_technology.png"
 // import pertamina from "../assets/img/home/sponsor-satuan/pertamina.png"
 // import exxon from "../assets/img/home/sponsor-satuan/exxon_mobil.png"
 // import dana from "../assets/img/home/sponsor-satuan/dana.png" 
@@ -21,6 +21,8 @@ import sliderTech from "../assets/img/home/slider/slider_technology.png"
 // import bki from "../assets/img/home/sponsor-satuan/bki.png" 
 // import sponsor from "../assets/img/home/sponsors.svg"
 
+import Slider from "react-slick"
+
 import video1 from "../assets/videos/coor_talkshow_2021.mp4"
 import video2 from "../assets/videos/po_2021.mp4"
 import video3 from "../assets/videos/staf_oilrig_2021.mp4"
@@ -33,8 +35,6 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Footer from '../components/Footer';
 import { useTitle } from 'react-use';
-import {Swiper, SwiperSlide} from 'swiper/react'
-import { Navigation, Pagination } from 'swiper';
 import 'swiper/css'
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -63,7 +63,13 @@ const Home = () => {
     }
   }
 
-
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1
+  }
 
   return (
     <div className='body'>
@@ -93,7 +99,7 @@ const Home = () => {
         <div className="position-absolute" id="floatingVideo2"></div>
         <div className="container text-white" data-aos="fade-up">
           <iframe w="true" src="https://www.youtube.com/embed/zSHrk151CbE" title="YouTube video player" allowFullScreen className="mb-4"></iframe>
-          <p className="text-green mb-3">Know About Petrolida</p>
+          <p className="text-green mb-3">About The Petrolida</p>
           <div className="d-flex justify-content-between container-content-video">
             <div className="left-video" data-aos="fade-right">
               <h2 className="fw-bold">Petroleum<br/>Integrated Days</h2>
@@ -164,7 +170,7 @@ const Home = () => {
               </Link>
             </div>
             <div className="p-3 col-12 col-lg-3" data-aos="fade-left">
-              <Link to="#" className="card-competitions" >
+              <Link to="competitions/case_study" className="card-competitions" >
                 <h3>Case Study</h3>
                 <p className='white-2'>Find the best solution for the given case problems related to the oil and gas industry</p>
                 <p className="read-more">Read More <img src={arrowRight} alt="Icon"/></p>
@@ -185,110 +191,63 @@ const Home = () => {
             <p data-aos="fade-left" className='white-2'>Don’t miss the ultimate opportunity to meet and interact with great speakers on Petrolida Career Talks, explore the city of Surabaya virtually, and Awarding Night.</p>
           </div>
           {/* <!-- carousel --> */}
-          <Swiper
-            slidesPerView={1}
-            spaceBetween={30}
-            slidesPerGroup={3}
-            loop={true}
-            loopFillGroupWithBlank={true}
-            pagination={{
-              clickable: true,
-            }}
-            navigation={true}
-            modules={[Pagination, Navigation]}
+          <Slider {...settings} >
 
-            breakpoints={{
-              640: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              1024: {
-                slidesPerView: 3,
-                spaceBetween: 50,
-              },
-            }}
-          >
-
-            <SwiperSlide>
-              <img src={sliderEnterpreneur} class="img-fluid" alt="Slider"/>
-              <div class="container-text-item-slider">
-                <h4>CV 101 : Nail an Astounding First Impression</h4>
-                <p class="text-secondary">Online</p>
-                <a href="">See Details <i class="fa-solid fa-chevron-right"></i></a>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <img src={sliderEnterpreneur} class="img-fluid" alt="Slider"/>
-              <div class="container-text-item-slider">
-                <h4>CV 101 : Nail an Astounding First Impression</h4>
-                <p class="text-secondary">Online</p>
-                <a href="">See Details <i class="fa-solid fa-chevron-right"></i></a>
-              </div>
-            </SwiperSlide>
-            
-            <SwiperSlide>
-              <img src={sliderEnterpreneur} class="img-fluid" alt="Slider"/>
-              <div class="container-text-item-slider">
-                <h4>CV 101 : Nail an Astounding First Impression</h4>
-                <p class="text-secondary">Online</p>
-                <a href="">See Details <i class="fa-solid fa-chevron-right"></i></a>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <img src={sliderEnterpreneur} class="img-fluid" alt="Slider"/>
-              <div class="container-text-item-slider">
-                <h4>CV 101 : Nail an Astounding First Impression</h4>
-                <p class="text-secondary">Online</p>
-                <a href="">See Details <i class="fa-solid fa-chevron-right"></i></a>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <img src={sliderEnterpreneur} class="img-fluid" alt="Slider"/>
-              <div class="container-text-item-slider">
-                <h4>CV 101 : Nail an Astounding First Impression</h4>
-                <p class="text-secondary">Online</p>
-                <a href="">See Details <i class="fa-solid fa-chevron-right"></i></a>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <img src={sliderEnterpreneur} class="img-fluid" alt="Slider"/>
-              <div class="container-text-item-slider">
-                <h4>CV 101 : Nail an Astounding First Impression</h4>
-                <p class="text-secondary">Online</p>
-                <a href="">See Details <i class="fa-solid fa-chevron-right"></i></a>
-              </div>
-            </SwiperSlide>
-          
-          </Swiper>
-          {/* <div id="carouselExampleControls" className="carousel slide w-50 mx-auto" data-bs-ride="carousel" data-aos="fade-up">
-            <div className="carousel-inner">
-              <div className="carousel-item active">
-                <Link to="#">
-                  <img src={sliderEnterpreneur} className="img-fluid d-block mx-auto" alt="Slider"/>
-                </Link>
-              </div>
-              <div className="carousel-item">
-                <Link to="#">
-                  <img src={sliderOilGas} className="img-fluid d-block mx-auto" alt="Slider"/>
-                </Link>
-              </div>
-              <div className="carousel-item">
-                <Link to="">
-                  <img src={sliderTech} className="img-fluid d-block mx-auto" alt="Slider"/>
-                </Link>
-              </div>
+          <div className="col-4 p-4 item-slider">
+            <img src={sliderEnterpreneur} className="img-fluid" alt="Slider"/>
+            <div className="container-text-item-slider">
+              <h4>CV 101 : Nail an Astounding First Impression</h4>
+              <p className="text-secondary">Online</p>
+              <a href="">See Details <i className="fa-solid fa-chevron-right"></i></a>
             </div>
-            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-              <i className="fas fa-arrow-left"></i>
-            </button>
-            <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-              <i className="fas fa-arrow-right"></i>
-            </button>
-          </div> */}
+          </div>
+
+          <div className="col-4 p-4 item-slider">
+            <img src={sliderEnterpreneur} className="img-fluid" alt="Slider"/>
+            <div className="container-text-item-slider">
+              <h4>CV 101 : Nail an Astounding First Impression</h4>
+              <p className="text-secondary">Online</p>
+              <a href="">See Details <i className="fa-solid fa-chevron-right"></i></a>
+            </div>
+          </div>
+
+          <div className="col-4 p-4 item-slider">
+            <img src={sliderEnterpreneur} className="img-fluid" alt="Slider"/>
+            <div className="container-text-item-slider">
+              <h4>CV 101 : Nail an Astounding First Impression</h4>
+              <p className="text-secondary">Online</p>
+              <a href="">See Details <i className="fa-solid fa-chevron-right"></i></a>
+            </div>
+          </div>
+
+          <div className="col-4 p-4 item-slider">
+            <img src={sliderEnterpreneur} className="img-fluid" alt="Slider"/>
+            <div className="container-text-item-slider">
+              <h4>CV 101 : Nail an Astounding First Impression</h4>
+              <p className="text-secondary">Online</p>
+              <a href="">See Details <i className="fa-solid fa-chevron-right"></i></a>
+            </div>
+          </div>
+
+          <div className="col-4 p-4 item-slider">
+            <img src={sliderEnterpreneur} className="img-fluid" alt="Slider"/>
+            <div className="container-text-item-slider">
+              <h4>CV 101 : Nail an Astounding First Impression</h4>
+              <p className="text-secondary">Online</p>
+              <a href="">See Details <i className="fa-solid fa-chevron-right"></i></a>
+            </div>
+          </div>
+
+          <div className="col-4 p-4 item-slider">
+            <img src={sliderEnterpreneur} className="img-fluid" alt="Slider"/>
+            <div className="container-text-item-slider">
+              <h4>CV 101 : Nail an Astounding First Impression</h4>
+              <p className="text-secondary">Online</p>
+              <a href="">See Details <i className="fa-solid fa-chevron-right"></i></a>
+            </div>
+          </div> 
+
+          </Slider>
           {/* <!-- /end carousel --> */}
         </div>
       </section>

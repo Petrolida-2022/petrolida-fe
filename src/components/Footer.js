@@ -29,8 +29,8 @@ const Footer = () => {
             <div className="col-sm-4 col-lg-4 visit-us">
                 <div className="headingtitle"><p>Visit Us</p></div>
                 <div className="information">
-                  <p>60111 Jawa Timur Surabaya Jl. Teknik Kimia</p>
-                  <p>Keputih, Sukolilo</p>
+                  <p>Jl. Teknik Kimia Keputih, Sukolilo</p>
+                  <p>Surabaya Jawa Timur 60111</p>
                 </div>
             </div>
             <div className="col-sm-4 col-lg-4 media">
