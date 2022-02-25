@@ -6,7 +6,7 @@ import mailImg from "../assets/img/business-case/mail.svg"
 import anounceImg from "../assets/img/business-case/anounce.svg"
 import wrImg from "../assets/img/business-case/wr1.png"
 import tmImg from "../assets/img/business-case/technicalmeeting.svg"
-import documentImg from "../assets/img/business-case/anounce.svg"
+import documentImg from "../assets/img/business-case/document.svg"
 import finalImg from"../assets/img/business-case/final.svg"
 import goldImg from "../assets/img/business-case/Gold.svg"
 import silverImg from "../assets/img/business-case/Silver.svg"
@@ -17,6 +17,10 @@ import { useTitle } from 'react-use'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Footer from '../components/Footer'
+import style from "../assets/css/sponsor.module.css"
+import telkom from "../assets/img/Logo Telkom Png 1.png"
+import bigbox from "../assets/img/bigbox.png"
+import { Link } from 'react-router-dom'
 
 const BusinessCase = () => {
   AOS.init()
@@ -29,7 +33,7 @@ const BusinessCase = () => {
         <div className="container">
           <div className="hero-title">
             <h1 className="">Business Case</h1>
-            <p className="hero-desc body2 cc68">Reinforcing artificial intelligence and machine learning in the logistic industry. Find a solution to a problem real business case paint point.</p>
+            <p className="hero-desc body2 cc68">Capitalizing big data products in the emerging market. Find solutions to a real business case pain point.</p>
           </div>
           <div className="row competition-status cc87">
             <div className="col-7">
@@ -50,17 +54,19 @@ const BusinessCase = () => {
               </button>
             </div>
             <div className="col-6">
-              <button className="buttonrgster" data-bs-toggle="modal" data-bs-target="#feedbackModal">
-                <span className=" align-items-center">
-                    <span className=" align-items-center">Register</span>
-                </span>
-              </button>
+              <Link to="register">
+                <button className="buttonrgster" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+                  <span className=" align-items-center">
+                      <span >Register</span>
+                  </span>
+                </button>
+              </Link>
             </div>
           </div>  
         </div>
         <div className="container timer">
           <div className="information">
-            <p>open registration</p>
+            <p className='text-white'>Open Registration</p>
             <div className="timer-container d-flex align-items-baseline">
               <div className="col-3 days">
                 <span id="days-number" className="d-block text-center">00</span>
@@ -87,8 +93,8 @@ const BusinessCase = () => {
       </section>
 
       <section className="row about" data-aos="fade-up">
-        <h3 className="cc87">Know About Competition</h3>
-        <p className="cc68">Business Case Competition is an international competition that primarily focuses on solving real business case paint points that happened in the world. With some advantages for your company such as brand awareness and publication especially in the logistic area, <br/><br/>we hope that our collaboration in structuring the “case” can engage and inspire youth that has an interest in Business Case Competition.</p>
+        <h3 className="cc87">About The Competition</h3>
+        <p className="cc68">The business case competition is a problem-solving competition that focuses on the industry's real-world problems. The participants must emphasize their ideas to solve the problems that the company has. There will be three stages in this competition that include the Preliminary round, Semi-final round, and Final round. The objective of the competition is to find feasible solutions with depth analysis of the problems.</p>
       </section>
 
       <section className="tl" data-aos="fade-up">
@@ -120,7 +126,7 @@ const BusinessCase = () => {
             </div>
             <div className="step">
               <div className="step-icon-wrap">
-                <div className="step-icon "><img src={anounceImg} alt="anounce"/></div>
+                <div className="step-icon "><img src={documentImg} alt="anounce"/></div>
               </div>
               <div className="information">
                 <p className="body4 cc68" style={{fontWeight: 'normal'}}>April 6th 2022</p>
@@ -292,11 +298,29 @@ const BusinessCase = () => {
       <section className="regist-anounce text-center">
         <h3 className="cc87">Don’t Forget to Register!</h3>
         <p className="cc68">Don’t miss the ultimate opportunity to showcase your ideas and innovation in reinforcing the a future of our energy industry</p>
-        <button className="buttonrgster" data-bs-toggle="modal" data-bs-target="#feedbackModal">
-          <span className=" align-items-center">
-              <span >Register</span>
-          </span>
-        </button>
+        <Link to="register">
+          <button className="buttonrgster" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+            <span className=" align-items-center">
+                <span>Register</span>
+            </span>
+          </button>
+        </Link>
+      </section>
+
+      <section className={`py-3 ${style.sponsor} bg-white`} style={{height: 'auto', margin: '100px 0'}}>
+        <div className="container text-center">
+          <h2 className={`fw-bold ${style.sponsor} mb-3`}>Sponsors & Supporting Partners</h2>
+          <div className='d-flex justify-content-center'>
+            <div className="row">
+              <div className="col-sm-6">
+                <img src={telkom} alt="Sponsors dan Supporting"/>
+              </div>
+              <div className="col-sm-6">
+                <img src={bigbox} alt="Sponsors dan Supporting"/>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <Footer/>

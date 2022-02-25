@@ -15,10 +15,16 @@ import favoriteImg from "../assets/img/favorite.svg"
 import accordionImg from "../assets/img/business-case/accordion.svg"
 import finalImg from "../assets/img/business-case/final.svg" 
 import pptIcon from "../assets/img/powerpoint.svg"
+
+import style from '../assets/css/sponsor.module.css'
+import pertaminaCepu from "../assets/img/sponsor-satuan/pertamina-cepu.png"
+
 import Navbar from '../components/Navbar'
 import { useTitle } from 'react-use'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import Footer from '../components/Footer'
+import { Link } from 'react-router-dom'
 
 const FractureDesign = () => {
   AOS.init()
@@ -52,17 +58,19 @@ const FractureDesign = () => {
               </button>
             </div>
             <div className="col-6">
+            <Link to="register">
               <button className="buttonrgster" data-bs-toggle="modal" data-bs-target="#feedbackModal">
                 <span className=" align-items-center">
-                    <span className=" align-items-center">Register</span>
+                    <span >Register</span>
                 </span>
               </button>
+            </Link>
             </div>
           </div>  
         </div>
         <div className="container timer">
           <div className="information">
-            <p>open registration</p>
+            <p className='text-white'>Open Registration</p>
             <div className="timer-container d-flex align-items-baseline">
               <div className="col-3 days">
                 <span id="days-number" className="d-block text-center">00</span>
@@ -89,7 +97,7 @@ const FractureDesign = () => {
       </section>
 
       <section className="row about" data-aos="fade-up">
-        <h3 className="cc87">Know About Competition</h3>
+        <h3 className="cc87">About The Competition</h3>
         <p className="cc68"> 
         The Fracturing Fluid Design Competition was first held in 2018 and credited with being the pioneer in the region of Pacific Asia. This competition will challenge all delegates to create the optimal capability of fracture fluid related to the given case.<br/><br/>
         Each team will present their findings directly to the judges and the most  optimal, including performance feasibility, environmental effects, and economic consideration, will have the most points.
@@ -192,7 +200,7 @@ const FractureDesign = () => {
         <div className="container-sm mx-auto">
           <div className="text-center">
             <h3 className="title cc87">Competition Price</h3>
-            <p className="desc body3 cc68">Winners have a chance to win the prize pool of Rp. 15,000,000, consist of</p>
+            <p className="desc body3 cc68">Winners have a chance to win the prize pool of Rp. 6,500,000, consist of</p>
           </div>
           <div className="price-detail row ">
             <div className="col-xl-6">
@@ -307,14 +315,29 @@ const FractureDesign = () => {
       <section className="regist-anounce text-center">
         <h3 className="cc87">Don’t Forget to Register!</h3>
         <p className="cc68">Don’t miss the ultimate opportunity to showcase your ideas and innovation in reinforcing the a future of our energy industry</p>
-        <button className="buttonrgster" data-bs-toggle="modal" data-bs-target="#feedbackModal">
-          <span className=" align-items-center">
-              <span >Register</span>
-          </span>
-        </button>
+        <Link to="register">
+          <button className="buttonrgster" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+            <span className=" align-items-center">
+                <span >Register</span>
+            </span>
+          </button>
+        </Link>
       </section>
 
-      
+      <section className={`py-3 ${style.sponsor} bg-white`} style={{height: 'auto', margin: '100px 0'}}>
+        <div className="container text-center">
+          <h2 className={`fw-bold ${style.sponsor} mb-3`}>Sponsors & Supporting Partners</h2>
+          <div className='d-flex justify-content-center'>
+            <div className="row">
+              <div className="col-6">
+                <img src={pertaminaCepu} alt="Sponsors dan Supporting"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer/>  
     </div>
   )
 }

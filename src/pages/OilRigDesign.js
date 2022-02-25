@@ -18,6 +18,7 @@ import { useTitle } from 'react-use'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Footer from '../components/Footer'
+import { Link } from 'react-router-dom'
 
 const OilRigDesign = () => {
   AOS.init()
@@ -30,7 +31,7 @@ const OilRigDesign = () => {
         <div className="container">
           <div className="hero-title">
             <h1 className="">Oil Rig Design</h1>
-            <p className="hero-desc body2 cc68">Driving sustanibility in Oil and Gas Industry. Challenge their knowledge to enchance scientific new innovation research</p>
+            <p className="hero-desc body2 cc68">Designing a semi-submersible platform though a sustainable approach for a specific offshore oil field to reinforce the future of energy industry.</p>
           </div>
           <div className="row competition-status cc87">
             <div className="col-7">
@@ -51,17 +52,19 @@ const OilRigDesign = () => {
               </button>
             </div>
             <div className="col-6">
+            <Link to="register">
               <button className="buttonrgster" data-bs-toggle="modal" data-bs-target="#feedbackModal">
                 <span className=" align-items-center">
-                    <span className=" align-items-center">Register</span>
+                    <span >Register</span>
                 </span>
               </button>
+            </Link>
             </div>
           </div>  
         </div>
         <div className="container timer">
           <div className="information">
-            <p>open registration</p>
+            <p className='text-white'>Open Registration</p>
             <div className="timer-container d-flex align-items-baseline">
               <div className="col-3 days">
                 <span id="days-number" className="d-block text-center">00</span>
@@ -88,9 +91,9 @@ const OilRigDesign = () => {
       </section>
 
       <section className="row about" data-aos="fade-up">
-        <h3 className="cc87">Know About Competition</h3>
+        <h3 className="cc87">About The Competition</h3>
         <p className="cc68">Oil Rig Design Competition that will be held online is a competition in which challenges participants to combine their engineering sense and creative innovations in designing a semi-submersible platform for a specific offshore oil field. Participants are expected to make a project explanation of their semi-submersible oil rig based on what situation they had. 
-        <br/><br/>
+        <br/>
         This competition aims to develop participants' knowledge to overcome all challenges in the given field. In the next round, participants are also expected to make a 3D Video for the selection in favorite winner categories and prepare a presentation to be presented in front of the judges.</p>
       </section>
 
@@ -156,7 +159,7 @@ const OilRigDesign = () => {
                 <div className="step-icon"><img src={tmImg} alt="technicalmeeting"/></div>
               </div>
               <div className="information">
-                <p className="body4 cc68" style={{fontWeight: 'normal'}}>May 15th 2022</p>
+                <p className="body4 cc68" style={{fontWeight: 'normal'}}>May 14th 2022</p>
                 <p className="body4 cc87" style={{fontWeight: '500px'}}>Technical Meeting & Simulation</p>
               </div>
             </div>
@@ -169,7 +172,7 @@ const OilRigDesign = () => {
         <div className="container-sm mx-auto">
           <div className="text-center">
             <h3 className="title cc87">Competition Price</h3>
-            <p className="desc body3 cc68">Winners have a chance to win the prize pool of Rp. 15,000,000, consist of</p>
+            <p className="desc body3 cc68">Winners have a chance to win the prize pool of Rp. 6,500,000, consist of</p>
           </div>
           <div className="price-detail row ">
             <div className="col-xl-6">
@@ -231,18 +234,13 @@ const OilRigDesign = () => {
                 <div className="accordion-item">
                   <h6 className="accordion-header">
                     <button className="accordion-button collapsed" aria-expanded="true" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
-                      What is the theme of this competition?
+                    Is it allowed to present other files in the question and answer session?
                       <span><img src={accordionImg} alt='wrap'/></span>
                     </button>
                   </h6>
                   <div id="faq-content-1" className="accordion-collapse collapse show" data-bs-parent="#faqlist1">
                     <div className="accordion-body">
-                    Petrolida 2022 Paper Competition will bring a theme of <strong>"Driving Sustainability in Oil and Gas Industry”</strong>, which will be specified into three sub-themes, as follow :
-                    <ol className="list-group-numbered">
-                      <li className="d-flex align-items-start"><div className="ms-2">Innovation in Technological Pathways for Decarbonizing Petroleum Refining.</div></li>
-                      <li className="d-flex align-items-start"><div className="ms-2">Risk Management and Its Mitigation to Prevent Accident in Oil and Gas Industry.</div></li>
-                      <li className="d-flex align-items-start"><div className="ms-2">Utilization of AI and Big Data Management to Maximize Production Planning and Forecasting in Oil and Gas Indust</div></li>
-                    </ol>
+                    Lorem
                     </div>
                   </div>
                   <hr/>
@@ -250,27 +248,13 @@ const OilRigDesign = () => {
                 <div className="accordion-item">
                   <h6 className="accordion-header">
                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
-                      Can I join as an individually?
+                      How can Petrolida assure delegates that this competition is fair?
                       <span><img src={accordionImg} alt='wrap'/></span>
                     </button>
                   </h6>
                   <div id="faq-content-2" className="accordion-collapse collapse" data-bs-parent="#faqlist1">
                     <div className="accordion-body">
-                      Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                    </div>
-                  </div>
-                  <hr/>
-                </div>
-                <div className="accordion-item">
-                  <h6 className="accordion-header">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
-                      Can a team member consist of different universities and majors?
-                      <span><img src={accordionImg} alt='wrap'/></span>
-                    </button>
-                  </h6>
-                  <div id="faq-content-3" className="accordion-collapse collapse" data-bs-parent="#faqlist1">
-                    <div className="accordion-body">
-                      Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                      All participants should open the camera and not allow to turn off the camera video feature in zoom platform and other meet to discuss will be attended by LO, cheating will be disqualified.
                     </div>
                   </div>
                   <hr/>
@@ -283,12 +267,14 @@ const OilRigDesign = () => {
 
       <section className="regist-anounce text-center">
         <h3 className="cc87">Don’t Forget to Register!</h3>
-        <p className="cc68">Don’t miss the ultimate opportunity to showcase your ideas and innovation in reinforcing the a future of our energy industry</p>
-        <button className="buttonrgster" data-bs-toggle="modal" data-bs-target="#feedbackModal">
-          <span className=" align-items-center">
-              <span >Register</span>
-          </span>
-        </button>
+        <p className="cc68">Don’t miss the ultimate opportunity to showcase your ideas and innovation in reinforcing the future of energy industry</p>
+        <Link to="register">
+          <button className="buttonrgster" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+            <span className=" align-items-center">
+                <span >Register</span>
+            </span>
+          </button>
+        </Link>
       </section>
 
       <Footer/>

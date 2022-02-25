@@ -19,7 +19,7 @@ const AwardingNight = () => {
         </div>
         <div className="container timer">
           <div className="information">
-            <p>open registration</p>
+            <p className='text-white'>Open Registration</p>
             <div className="timer-container d-flex align-items-baseline">
               <div className="col-3 days">
                 <span id="days-number" className="d-block text-center">00</span>
