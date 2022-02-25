@@ -17,7 +17,6 @@ html {
 }
 
 nav {
-  font-family: "Poppins";
   padding: 10px 0;
 }
 
@@ -39,7 +38,7 @@ nav ul li a:hover {
 nav ul li a.sign-in {
   border: 0;
   padding: 5px 45px;
-  border-radius: 8px;
+  border-radius: 5px;
   border: 2px solid #28a562;
   background-color: transparent;
   color: #28a562;
@@ -49,21 +48,35 @@ nav ul li a.sign-in {
 nav ul li a.sign-in:hover {
   border: 0;
   padding: 5px 45px;
-  border-radius: 8px;
+  border-radius: 5px;
   border: 2px solid #28a562;
   background-color: #28a562;
   color: #fff;
 }
 
-@media screen and (max-width: 768px) {
+nav ul .btn-dropdown {
+  padding: 0 !important;
+  color: #fff !important;
+}
+
+nav ul .dropdown-menu li a:hover {
+  color: #fff;
+  background-color: #1f7949;
+}
+
+nav ul .btn-group {
+  margin: 0 10px;
+}
+
+@media screen and (max-width: 992px) {
   nav .container a#logo-petrolida,
   nav .container button {
     z-index: 1;
   }
-  nav .container ul {
+  nav .container ul.main-ul {
     display: none !important;
   }
-  nav .container ul.responsive {
+  nav .container ul.main-ul.responsive {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
@@ -74,7 +87,7 @@ nav ul li a.sign-in:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background: #0f131e;
+    background: #1B2845;
     margin: 0;
     padding: 0px;
     padding-top: 80px;
@@ -83,15 +96,15 @@ nav ul li a.sign-in:hover {
     left: 0;
     bottom: 0;
     right: 0;
-    z-index: 99999;
+    z-index: 1;
   }
-  nav .container ul.responsive a.sign-in {
+  nav .container ul.main-ul.responsive a.sign-in {
     margin: 0;
   }
-  nav .container ul.responsive li {
+  nav .container ul.main-ul.responsive .li {
     margin: 10px 0;
   }
-  nav .container ul.responsive li:last-child {
+  nav .container ul.main-ul.responsive .li:last-child {
     margin-top: 50px;
   }
 }
