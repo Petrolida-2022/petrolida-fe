@@ -27,7 +27,7 @@ const StockTrading = () => {
     <div className='body'>
       <Navbar/>
 
-      <section className="herobisniscase hero">
+      <section className="herostc hero">
         <div className="container">
           <div className="hero-title">
             <h1 className="">Stock Trading</h1>
@@ -45,18 +45,22 @@ const StockTrading = () => {
           </div>
           <div className="row button-info">
             <div className="col-6">
-              <button className="button" data-bs-toggle="modal" data-bs-target="#feedbackModal">
-                <span className=" align-items-center">
-                    <span className=" align-items-center">Guide Book</span>
-                </span>
-              </button>
+              <a href="https://bit.ly/InvitationLetterPETROLIDA2022" target="_blank" rel="noopener noreferrer">
+                <button className="button" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+                  <span className=" align-items-center">
+                      <span className=" align-items-center">Guide Book</span>
+                  </span>
+                </button>
+              </a>
             </div>
             <div className="col-6">
-              <button className="buttonrgster" data-bs-toggle="modal" data-bs-target="#feedbackModal">
-                <span className=" align-items-center">
-                    <span className=" align-items-center">Register</span>
-                </span>
-              </button>
+              <Link to="register">
+                <button className="buttonrgster" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+                  <span className=" align-items-center">
+                      <span >Register</span>
+                  </span>
+                </button>
+              </Link>
             </div>
           </div>  
         </div>
@@ -98,7 +102,7 @@ const StockTrading = () => {
       <section className="tl" data-aos="fade-up">
         <div className="container stage text-center">
           <h3> Competition Stage</h3>
-          <p className="text-center">This competition will be divided into three stages: Preliminary stage, Presentation Stage, and Final Stage</p>
+          <p className="text-center">This competition will be divided into three stages: Preliminary Round, Semifinal Round, and Final Round</p>
         </div>
         <div className="timeline container">
           <div className="vlstock"></div>
@@ -199,8 +203,8 @@ const StockTrading = () => {
       <section className="competition-price" data-aos="fade-up">
         <div className="container-sm mx-auto">
           <div className="text-center">
-            <h3 className="title cc87">Competition Price</h3>
-            <p className="desc body3 cc68">Winners have a chance to win the prize pool of Rp. 15,000,000, consist of</p>
+            <h3 className="title cc87">Competition Prize</h3>
+            <p className="desc body3 cc68">Winners have a chance to win the prize pool of Rp. 6,000,000, consist of</p>
           </div>
           <div className="price-detail row ">
             <div className="col-xl-6">
@@ -259,12 +263,7 @@ const StockTrading = () => {
                   </h6>
                   <div id="faq-content-1" className="accordion-collapse collapse show" data-bs-parent="#faqlist1">
                     <div className="accordion-body">
-                    Petrolida 2022 Paper Competition will bring a theme of <strong>"Driving Sustainability in Oil and Gas Industry”</strong>, which will be specified into three sub-themes, as follow :
-                    <ol className="list-group-numbered">
-                      <li className="d-flex align-items-start"><div className="ms-2">Innovation in Technological Pathways for Decarbonizing Petroleum Refining.</div></li>
-                      <li className="d-flex align-items-start"><div className="ms-2">Risk Management and Its Mitigation to Prevent Accident in Oil and Gas Industry.</div></li>
-                      <li className="d-flex align-items-start"><div className="ms-2">Utilization of AI and Big Data Management to Maximize Production Planning and Forecasting in Oil and Gas Indust</div></li>
-                    </ol>
+                    
                     </div>
                   </div>
                   <hr/>
@@ -278,7 +277,7 @@ const StockTrading = () => {
                   </h6>
                   <div id="faq-content-3" className="accordion-collapse collapse" data-bs-parent="#faqlist1">
                     <div className="accordion-body">
-                      Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                      
                     </div>
                   </div>
                   <hr/>
@@ -291,7 +290,7 @@ const StockTrading = () => {
 
       <section className="regist-anounce text-center">
         <h3 className="cc87">Don’t Forget to Register!</h3>
-        <p className="cc68">Don’t miss the ultimate opportunity to showcase your ideas and innovation in reinforcing the a future of our energy industry</p>
+        <p className="cc68">Don’t miss the ultimate opportunity to showcase your ideas and innovation in reinforcing the future of our energy industry</p>
         <Link to="register">
           <button className="buttonrgster" data-bs-toggle="modal" data-bs-target="#feedbackModal">
             <span className=" align-items-center">

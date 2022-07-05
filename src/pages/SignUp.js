@@ -15,6 +15,7 @@ const SignUp = () => {
   const navigate = useNavigate()
 
   const [loading, setLoading] = useState(false)
+  const [isChecked, setIsChecked] = useState(false)
 
   const [data, setData] = useState({
     name: '',
@@ -23,16 +24,24 @@ const SignUp = () => {
   })
 
 
-  const handleSignUp = () => {
+  const handleSignUp = e => {
+    e.preventDefault()
     setLoading(true)
     register(data)
       .then(res => {
-        Swal.fire(({
-          icon: 'success',
-          text: 'Success Register'
-        }))
-        navigate('/account/sign_in')
         setLoading(false)
+        if(res?.email){
+          Swal.fire({
+            icon:'error',
+            text: 'The email has already been taken.'
+          })
+        } else{
+          Swal.fire(({
+            icon: 'success',
+            text: 'Success Register'
+          }))
+          navigate('/account/sign_in')
+        }
       })
       .catch(err => {
         Swal.fire({
@@ -57,28 +66,28 @@ const SignUp = () => {
               <p className="body2 login-desc">Petroleum Integrated Days (Petrolida) is the biggest annual event held by SPE ITS Student Chapter. This year's series will be the 10th annual event.</p>
             </div>
             <div className="col-xl-6 col-lg-6 text-white">
-              <div className="form mx-auto">
+              <form className="form mx-auto" onSubmit={e => handleSignUp(e)}>
                 <h2 className="h5">Register Account!</h2>
                 <p className="body3 mt-2">Getting closer to us, join now!</p>
                 <div className="my-3">
-                  <label for="fullname" className="form-label">Your full name</label>
-                  <input type="text" className="form-input" id="fullname" name="name" onChange={e => setData({...data, name: e.target.value})} autofocus placeholder="Enter your full name"/>
+                  <label htmlFor="fullname" className="form-label">Your full name</label>
+                  <input type="text" required className="form-input" id="fullname" name="name" onChange={e => setData({...data, name: e.target.value})} autoFocus placeholder="Enter your full name"/>
                 </div>
                 <div className="my-3">
-                  <label for="email" className="form-label">Email address</label>
-                  <input type="email" className="form-input" id="email" name="email" onChange={e => setData({...data, email: e.target.value})} placeholder="Enter email address"/>
+                  <label htmlFor="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" className="form-label">Email address</label>
+                  <input type="email" required className="form-input" id="email" name="email" onChange={e => setData({...data, email: e.target.value})} placeholder="Enter email address"/>
                 </div>
                 <div className="my-3">
-                  <label for="password" className="form-label">Password</label>
-                  <input type="password" className="form-input" id="password" name="password" onChange={e => setData({...data, password: e.target.value})} placeholder="Enter password"/>
+                  <label htmlFor="password" className="form-label">Password</label>
+                  <input type="password" required className="form-input" id="password" name="password" onChange={e => setData({...data, password: e.target.value})} placeholder="Enter password"/>
                 </div>
                 <div className="my-3">
-                  <input type="checkbox" id="confirm" className="form-checkbox d-inline-block me-2"/>
-                  <label for="confirm" className="form-label">I agree to the terms & conditions</label>
+                  <input type="checkbox" id="confirm" onChange={e => setIsChecked(e.target.checked)} className="form-checkbox d-inline-block me-2"/>
+                  <label htmlFor="confirm" className="form-label">I agree to the terms & conditions</label>
                 </div>
-                <button type="submit" onClick={handleSignUp} className="form-button d-block ms-auto w-100">{loading ? <Spinner/> : 'Register Account'}</button>
-                <p className="body2 text-center mt-4">Already have an account? <Link to="/account/sign_in">Sign in</Link></p>
-              </div>
+                <button type="submit" className={`form-button d-block ms-auto w-100 ${!isChecked && 'disabled'}`} disabled={!isChecked}>{loading ? <Spinner/> : 'Register Account'}</button>
+                <p className="body2 text-center mt-4">Already have an account? <Link to="/account/sign_in" className='primary-color'>Sign in</Link></p>
+              </form>
             </div>
           </div>
         </div>

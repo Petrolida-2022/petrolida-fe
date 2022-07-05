@@ -25,7 +25,7 @@ const Petrosmart = () => {
     <div className='body'>
       <Navbar/>
 
-      <section className="herobisniscase hero">
+      <section className="heropetrosmart hero">
         <div className="container">
           <div className="hero-title">
             <h1 className="">Petrosmart</h1>
@@ -43,18 +43,22 @@ const Petrosmart = () => {
           </div>
           <div className="row button-info">
             <div className="col-6">
-              <button className="button" data-bs-toggle="modal" data-bs-target="#feedbackModal">
-                <span className=" align-items-center">
-                    <span className=" align-items-center">Guide Book</span>
-                </span>
-              </button>
+              <a href="https://bit.ly/InvitationLetterPETROLIDA2022" target="_blank" rel="noopener noreferrer">
+                <button className="button" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+                  <span className=" align-items-center">
+                      <span className=" align-items-center">Guide Book</span>
+                  </span>
+                </button>
+              </a>
             </div>
             <div className="col-6">
-              <button className="buttonrgster" data-bs-toggle="modal" data-bs-target="#feedbackModal">
-                <span className=" align-items-center">
-                    <span className=" align-items-center">Register</span>
-                </span>
-              </button>
+              <Link to="register">
+                <button className="buttonrgster" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+                  <span className=" align-items-center">
+                      <span >Register</span>
+                  </span>
+                </button>
+              </Link>
             </div>
           </div>  
         </div>
@@ -104,7 +108,7 @@ const Petrosmart = () => {
       <section className="tl" data-aos="fade-up">
         <div className="container stage text-center">
           <h3> Competition Stage</h3>
-          <p className="text-center">This competition will be divided into three stages: Online Preliminary, Semifinal Round, and Final Round</p>
+          <p className="text-center">This competition will be divided into two stages: Online Preliminary and Final Round</p>
         </div>
         <div className="timeline container">
           <div className="vlpetrosmart"></div>
@@ -124,7 +128,7 @@ const Petrosmart = () => {
               </div>
               <div className="information">
                 <p className="body4 cc68" style={{fontWeight: 'normal'}}>April 14th 2022</p>
-                <p className="body4 cc87" style={{fontWeight: "500px"}}>Online Preliminaryn</p>
+                <p className="body4 cc87" style={{fontWeight: "500px"}}>Online Preliminary</p>
               </div>
             </div>
             <div className="step">
@@ -165,8 +169,8 @@ const Petrosmart = () => {
       <section className="competition-price" data-aos="fade-up">
         <div className="container-sm mx-auto">
           <div className="text-center">
-            <h3 className="title cc87">Competition Price</h3>
-            <p className="desc body3 cc68">Winners have a chance to win the prize pool of Rp. 15,000,000, consist of</p>
+            <h3 className="title cc87">Competition Prize</h3>
+            <p className="desc body3 cc68">Winners have a chance to win the prize pool of Rp. 6,000,000, consist of</p>
           </div>
           <div className="price-detail row ">
             <div className="col-xl-6">
@@ -225,7 +229,7 @@ const Petrosmart = () => {
                   </h6>
                   <div id="faq-content-1" className="accordion-collapse collapse show" data-bs-parent="#faqlist1">
                     <div className="accordion-body">
-                      Unfortunately, iit will be held offline.
+                    Due to the COVID-19 condition, it will be held online. But don't worry, it won't make the final round less exciting!
                     </div>
                   </div>
                   <hr/>

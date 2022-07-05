@@ -66,7 +66,7 @@ const Navbar = ({ currentPage }) => {
           </li>
 
           {!token && <>
-            <li className="li"><Link to="account/sign_in" className="sign-in">Sign in</Link></li>
+            <li className="li"><Link to="/account/sign_in" className="sign-in">Sign in</Link></li>
           </>
           }
           {token && 
@@ -81,7 +81,7 @@ const Navbar = ({ currentPage }) => {
                 <a href="" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,10"><FaUserAlt/></a>
                 <ul className="dropdown-menu dropdown-menu-end">
                   <li className="dropdown-item">
-                    <a href=""><i className="far fa-user"></i> &nbsp;&nbsp;Account</a>
+                    <Link to="/coming_soon"><i className="far fa-user"></i> &nbsp;&nbsp;Account</Link>
                   </li>
                   <li className="dropdown-item">
                     <a href="/#" onClick={handleLogout}><i className="fas fa-sign-out-alt"></i> &nbsp;&nbsp;Logout</a>

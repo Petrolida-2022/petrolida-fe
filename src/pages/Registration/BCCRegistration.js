@@ -9,9 +9,7 @@ import { bccRegistration } from '../../services/comp_registration'
 import Swal from 'sweetalert2'
 import { useNavigate } from 'react-router-dom'
 import Spinner from '../../components/Spinner'
-import mandiri from '../../assets/img/mandiri-logo.png'
-import paypal from '../../assets/img/paypal-logo.png'
-import chevronDown from '../../assets/img/chevron-down.svg'
+
 
 const BCCRegistration = () => {
   const [token] = useCookie('token')
@@ -248,44 +246,6 @@ const BCCRegistration = () => {
                     <label htmlFor="member2_file" className="form-label">Team member 2*</label>
                     <input required className="form-control" type="file" id="member2_file" name="member2_file" tabIndex="16" accept=".zip,.rar" onChange={e => setData({...data, member2_file: e.target.files[0]})}/>
                     <small class="text-danger body4">Max 5MB Format zip/rar</small>
-                  </div>
-                  <div className="my-3">
-                    <label htmlFor="member2_file" className="form-label">Team member 3*</label>
-                    <input required className="form-control" type="file" id="member2_file" name="member2_file" tabIndex="16" accept=".zip,.rar" onChange={e => setData({...data, member3_file: e.target.files[0]})}/>
-                    <small class="text-danger body4">Max 5MB Format zip/rar</small>
-                  </div>
-                  <div className="my-3">
-                    <label htmlFor="member2_file" className="form-label">Team member 4</label>
-                    <input required className="form-control" type="file" id="member2_file" name="member2_file" tabIndex="16" accept=".zip,.rar" onChange={e => setData({...data, member4_file: e.target.files[0]})}/>
-                    <small class="text-danger body4">Max 5MB Format zip/rar</small>
-                  </div>
-                  <h3 className="form-section h7 mt-4">Upload your Payment</h3>
-                  <a className="payment-button body2 collapsed d-flex align-items-center mt-2" data-bs-toggle="collapse" href="#paymentDestination" role="button" aria-expanded="false" aria-controls="paymentDestination">
-                    <img src={chevronDown} className="payment-chevron d-block me-2" alt=""/>
-                    Payment Options
-                  </a>
-                  <div className="collapse" id="paymentDestination">
-                    <div className="row">
-                      <div className="col-lg-6">
-                        <div className="payment my-3 d-flex flex-column justify-content-center align-items-center">
-                          <img src={mandiri} className="payment-logo" alt=""/>
-                          <p className="payment-target mt-3 mb-2">1400018470352</p>
-                          <p className="payment-name">a.n Elysha Mundisari</p>
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <div className="payment my-3 d-flex flex-column justify-content-center align-items-center">
-                          <img src={paypal} className="payment-logo" alt=""/>
-                          <p className="payment-target mt-3 mb-2">www.paypal.me/elyshamundisari</p>
-                          <p className="payment-name">a.n Elysha Mundisari</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="my-3">
-                    <label for="payment" className="form-label">Payment Receipt*</label>
-                    <input required className="form-control" type="file" id="payment" name="payment" tabindex="17" accept=".png,.jpg,.jpeg" onChange={e => setData({...data, payment: e.target.files[0]})}/>
-                    <small class="text-danger body4">Max 1MB Format jpg/jpeg/png</small>
                   </div>
                   <button type="submit" tabIndex="17" className="form-button d-block ms-auto" >{loading ? <Spinner/> : 'Complete Submission'}</button>
                 </div>

@@ -47,7 +47,7 @@ const AwardingNight = () => {
 
       <section className="regist-anounce text-center">
         <h3 className="cc87">Don’t Forget to Register!</h3>
-        <p className="cc68">Don’t miss the ultimate opportunity to showcase your ideas and innovation in reinforcing the a future of our energy industry</p>
+        <p className="cc68">Don’t miss the ultimate opportunity to showcase your ideas and innovation in reinforcing the future of our energy industry</p>
         <button className="buttonrgster" data-bs-toggle="modal" data-bs-target="#feedbackModal">
           <span className=" align-items-center">
               <span >Register</span>

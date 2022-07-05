@@ -6,20 +6,31 @@ import arrowRight from "../assets/img/home/long-arrow-right.svg"
 import sliderEnterpreneur from "../assets/img/home/slider/slider_entrepreneurship.png"
 // import sliderOilGas from "../assets/img/home/slider/slide_oil_gas.png" 
 // import sliderTech from "../assets/img/home/slider/slider_technology.png"
-// import pertamina from "../assets/img/home/sponsor-satuan/pertamina.png"
-// import exxon from "../assets/img/home/sponsor-satuan/exxon_mobil.png"
-// import dana from "../assets/img/home/sponsor-satuan/dana.png" 
-// import pln from "../assets/img/home/sponsor-satuan/pln.png" 
-// import pertaminaCepu from "../assets/img/home/sponsor-satuan/pertamina_cepu.png"
-// import cimbNiaga from "../assets/img/home/sponsor-satuan/cimb_niaga.png" 
-// import krakatau from "../assets/img/home/sponsor-satuan/pt_krakatau.png"  
-// import phe from "../assets/img/home/sponsor-satuan/pertamina_phe.png" 
-// import cicil from "../assets/img/home/sponsor-satuan/cicil.png" 
-// import skkMigas from "../assets/img/home/sponsor-satuan/skkm_migas.png" 
-// import blokCepu from "../assets/img/home/sponsor-satuan/blok_cepu.png" 
-// import medco from "../assets/img/home/sponsor-satuan/medco_energi.png" 
-// import bki from "../assets/img/home/sponsor-satuan/bki.png" 
-// import sponsor from "../assets/img/home/sponsors.svg"
+import skkMigas from '../assets/img/Partnership/1280px-Logo_of_SKK_Migas.png'
+import ditjenMigas from '../assets/img/Partnership/Direktorat Jenderal Migas.png'
+import kmi from '../assets/img/Partnership/KMI Logo.jpg'
+import itsJazz from '../assets/img/Partnership/logo ITS Jazz.png'
+import studio31 from '../assets/img/Partnership/logo Studio 31.png'
+import sponsor from "../assets/img/home/sponsors.svg"
+
+import badakLng from '../assets/img/Sponsorship/Badak LNG (S).png'
+import exxon from '../assets/img/Sponsorship/EXXON (L).png'
+import indoRayaTenaga from '../assets/img/Sponsorship/Indo Raya Tenaga (S).jpeg'
+import indonesiaPower from '../assets/img/Sponsorship/Indonesia power (S).png'
+import phr from '../assets/img/Sponsorship/Logo PHR_Horizontal (XL).png'
+import pkt from '../assets/img/Sponsorship/LOGO PKT (S).png'
+import pln from '../assets/img/Sponsorship/Logo_PLN (L).png'
+import kisi from '../assets/img/Sponsorship/logo-kisi (L).png'
+import drilling from '../assets/img/Sponsorship/Pertamina drlling (M).jpeg'
+import petronas from '../assets/img/Sponsorship/PETRONAS Logo for Light Background (M).png'
+import petrokimia from '../assets/img/Sponsorship/Petrokimia_Gresik_logo (S).png'
+import pgn from '../assets/img/Sponsorship/PGN saka (M).png'
+import pos from '../assets/img/Sponsorship/POS INDONESIA_logo (S).jpeg'
+import premier from '../assets/img/Sponsorship/Premier Oil (S).png'
+import tppi from '../assets/img/Sponsorship/TPPI Logo 2 (M).jpg.png'
+import tristar from '../assets/img/Sponsorship/Tristar Marine (S).jpeg'
+
+import homeSponsor from '../assets/img/home-sponsor.png'
 
 import Slider from "react-slick"
 
@@ -38,10 +49,12 @@ import { useTitle } from 'react-use';
 import 'swiper/css'
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { useCookie } from 'react-use';
 
 const Home = () => {
   AOS.init()
   useTitle('Home | Petrolida')
+  const [token] = useCookie('token')
   const [index, setIndex] = useState(0)
   const videos = [video1, video2, video3]
   const poster = [poster1, poster2, poster3]
@@ -85,8 +98,9 @@ const Home = () => {
           <h1 className="mb-3 mb-md-5 fw-bold">Utilizing <span className="text-green">sustainable</span> ideas & innovations to reinforce the <span className="text-green">future</span> of <span className="text-green">energy</span> industry</h1>
           <p className="white-2 mb-5">Explore and disclose innovation regarding today’s energy challenges through providing them a chance to achieve substantial and competitive experiences to advance their excellence.</p>
           <div className="d-md-flex justify-content-center">
-            <Link to="#" className="d-none d-md-block btn-hero-first">Learn More</Link>
-            <Link to="#" className="d-block btn-hero-second">Register</Link>
+            <Link to="#video" className="d-none d-md-block btn-hero-first">Learn More</Link>
+            {!token && <Link to="/account/sign_up" className="d-block btn-hero-second">Register</Link>}
+            {token && <Link to="/#competition" className="d-block btn-hero-second">Register</Link>}
             <Link to="#" className="d-block d-md-none btn-hero-third">Learn More</Link>
           </div>
         </div>
@@ -121,7 +135,7 @@ const Home = () => {
           {/* <!-- header --> */}
           <div className="header text-center w-50 mx-auto mb-5">
             <p className="text-green">Competitions</p>
-            <h2 className="mb-5 fw-bold">7 Competitions Events</h2>
+            <h2 className="mb-5 fw-bold">7 Competition Events</h2>
             <p>Meet other participants, let’s show your ideas, innovations and abilities to Petrolida 2022</p>
           </div>
           {/* <!-- /end header --> */}
@@ -130,49 +144,49 @@ const Home = () => {
             <div className="p-3 col-12 col-lg-3" data-aos="fade-right">
               <Link to="competitions/oil_rig_design" className="card-competitions">
                 <h3>Oil Rig Design</h3>
-                <p className='white-2'>Designing a semi-submersible platform for a specific offshore oil field</p>
+                <p className='white-2'>Design a semi-submersible platform for a specific offshore oil field</p>
                 <p className="read-more">Read More <img src={arrowRight} alt="Icon"/></p>
               </Link>
             </div>
             <div className="p-3 col-12 col-lg-3" data-aos="fade-right">
               <Link to="competitions/fracturing_fluid_design" className="card-competitions">
                 <h3>Fracturing Fluid Design</h3>
-                <p className='white-2'>Create the optimal capability of fracture fluid related to the given case</p>
+                <p className='white-2'>Formulate the optimal fracture fluid to solve the problem based on the...</p>
                 <p className="read-more">Read More <img src={arrowRight} alt="Icon"/></p>
               </Link>
             </div>
             <div className="p-3 col-12 col-lg-3" data-aos="fade-left">
               <Link to="competitions/petrosmart" className="card-competitions">
                 <h3>Petrosmart</h3>
-                <p className='white-2'>Challenge their knowledge by answering questions about oil and gas industry</p>
+                <p className='white-2'>Challenge your knowledge related to the oil and gas industry by answering quick-fire questions</p>
                 <p className="read-more">Read More <img src={arrowRight} alt="Icon"/></p>
               </Link>
             </div>
             <div className="p-3 col-12 col-lg-3" data-aos="fade-left">
               <Link to="competitions/paper" className="card-competitions">
                 <h3>Paper</h3>
-                <p className='white-2'>Challenge their knowledge to enchance scientific new innovation research</p>
+                <p className='white-2'>Innovate and present your ideas related to oil and gas in a form of research paper</p>
                 <p className="read-more">Read More <img src={arrowRight} alt="Icon"/></p>
               </Link>
             </div>
             <div className="p-3 col-12 col-lg-3" data-aos="fade-right">
               <Link to="competitions/stock_trading" className="card-competitions">
                 <h3>Stock Trading</h3>
-                <p className='white-2'>Obtain the highest profit from online trading and give arguments about Indonesia stock market</p>
+                <p className='white-2'>Obtain the highest profit from online stock trading and participate on the FGD about Indonesia Stock...</p>
                 <p className="read-more">Read More <img src={arrowRight} alt="Icon"/></p>
               </Link>
             </div>
             <div className="p-3 col-12 col-lg-3" data-aos="fade-right">
               <Link to="competitions/business_case" className="card-competitions">
                 <h3>Business Case</h3>
-                <p className='white-2'>Find a solution to a problem real business case paint point</p>
+                <p className='white-2'>Find the most suitable solution to answer a real business case problem</p>
                 <p className="read-more">Read More <img src={arrowRight} alt="Icon"/></p>
               </Link>
             </div>
             <div className="p-3 col-12 col-lg-3" data-aos="fade-left">
               <Link to="competitions/case_study" className="card-competitions" >
                 <h3>Case Study</h3>
-                <p className='white-2'>Find the best solution for the given case problems related to the oil and gas industry</p>
+                <p className='white-2'>Challenge your oil and gas knowledge to solve a problem based on the case given</p>
                 <p className="read-more">Read More <img src={arrowRight} alt="Icon"/></p>
               </Link>
             </div>
@@ -258,8 +272,8 @@ const Home = () => {
         <div className="background w-100 p-5">
           <div className="container text-white position-relative">
             <p className="text-green mb-3">Testimonials</p>
-            <h2 className="mb-3">What They Say<br/>About Us</h2>
-            <p className='white-2'>For convincing you who still confused to decide, let's hear<br/> what they say about journey of being Petrolida's</p>
+            <h2 className="mb-5">What They Say<br/>About Us</h2>
+            <p className='white-2'>To convince you who are still confused to decide, let's hear what they say about becoming a part of Petrolida's journey</p>
             <button className="btn shadow-none text-dark rounded-circle mt-4" id="btn-left-testi" onClick={leftBtnHandler}><i className="fas fa-arrow-left"></i></button>
             <button className="btn shadow-none text-white rounded-circle mt-4" id="btn-right-testi" onClick={rightBtnHandler}><i className="fas fa-arrow-right"></i></button>
             <video src={videos[index]} poster={poster[index]} controls width="330" height="330" preload="metadata" id="video-testi"></video>
@@ -272,63 +286,84 @@ const Home = () => {
       <section id="cta">
         <div className="container text-center text-white w-50">
           <h2 className="mb-4 fw-bold">Don't Forget to Register!</h2>
-          <p className="mb-4">Don’t miss the ultimate opportunity to showcase your ideas and innovation in reinforcing the a future of our energy industry</p>
+          <p className="mb-4">Don’t miss the ultimate opportunity to showcase your ideas and innovation in reinforcing the future of our energy industry</p>
           <button>Register</button>
         </div>
       </section>
       {/* <!-- /end cta --> */}
 
       {/* <!-- sponsors & supporting partners --> */}
-      {/* <section id="sponsors" className="pt-5">
-        <div className="container pt-5 text-center text-white">
-          <h2 className="mb-5 fw-bold">Sponsors & Supporting Partners</h2>
+      <section id="sponsors" className="pt-5 bg-white">
+        <div className="container p-3 text-center">
+          <h2 className="mb-2 fw-bold">Sponsors & Supporting Partners</h2>
           <div className='d-flex justify-content-center'>
-            <img src={sponsor} alt="Sponsors & Supporting Partners" className="img-fluid mt-3 d-none d-md-block"/>
+            <img src={homeSponsor} alt="Sponsors & Supporting Partners" className="img-fluid mt-3 d-none d-md-block"/>
             <div className="row d-md-none">
               <div className="col-6">
-                <img src={pertamina} alt="Sponsors dan Supporting"/>
+                <img src={ditjenMigas} className="img-fluid" alt="Sponsors dan Supporting"/>
               </div>
               <div className="col-6">
-                <img src={exxon} alt="Sponsors dan Supporting"/>
+                <img src={kmi} className="img-fluid"alt="Sponsors dan Supporting"/>
               </div>
               <div className="col-6">
-                <img src={dana}alt="Sponsors dan Supporting"/>
+                <img src={pln} className="img-fluid" alt="Sponsors dan Supporting"/>
               </div>
               <div className="col-6">
-                <img src={pln}alt="Sponsors dan Supporting"/>
+                <img src={itsJazz} className="img-fluid"alt="Sponsors dan Supporting"/>
               </div>
               <div className="col-6">
-                <img src={pertaminaCepu}alt="Sponsors dan Supporting"/>
+                <img src={studio31} className="img-fluid"alt="Sponsors dan Supporting"/>
               </div>
               <div className="col-6">
-                <img src={cimbNiaga}alt="Sponsors dan Supporting"/>
+                <img src={badakLng} className="img-fluid"alt="Sponsors dan Supporting"/>
               </div>
               <div className="col-6">
-                <img src={krakatau}alt="Sponsors dan Supporting"/>
+                <img src={indoRayaTenaga} className="img-fluid"alt="Sponsors dan Supporting"/>
               </div>
               <div className="col-6">
-                <img src={phe}alt="Sponsors dan Supporting"/>
+                <img src={indonesiaPower} className="img-fluid" alt="Sponsors dan Supporting"/>
               </div>
               <div className="col-6">
-                <img src={cicil} alt="Sponsors dan Supporting"/>
+                <img src={skkMigas} className="img-fluid" alt="Sponsors dan Supporting"/>
               </div>
               <div className="col-6">
-                <img src={skkMigas}alt="Sponsors dan Supporting"/>
+                <img src={phr} className="img-fluid"alt="Sponsors dan Supporting"/>
               </div>
               <div className="col-6">
-                <img src={blokCepu}alt="Sponsors dan Supporting"/>
+                <img src={pkt} className="img-fluid" alt="Sponsors dan Supporting"/>
               </div>
               <div className="col-6">
-                <img src={medco}alt="Sponsors dan Supporting"/>
+                <img src={kisi} className="img-fluid" alt="Sponsors dan Supporting"/>
               </div>
               <div className="col-6">
-                <img src={bki}alt="Sponsors dan Supporting"/>
+                <img src={drilling} className="img-fluid" alt="Sponsors dan Supporting"/>
+              </div>
+              <div className="col-6">
+                <img src={petronas} className="img-fluid" alt="Sponsors dan Supporting"/>
+              </div>
+              <div className="col-6">
+                <img src={petrokimia} className="img-fluid" alt="Sponsors dan Supporting"/>
+              </div>
+              <div className="col-6">
+                <img src={pgn} className="img-fluid" alt="Sponsors dan Supporting"/>
+              </div>
+              <div className="col-6">
+                <img src={pos} className="img-fluid" alt="Sponsors dan Supporting"/>
+              </div>
+              <div className="col-6">
+                <img src={premier} className="img-fluid" alt="Sponsors dan Supporting"/>
+              </div>
+              <div className="col-6">
+                <img src={tppi} className="img-fluid" alt="Sponsors dan Supporting"/>
+              </div>
+              <div className="col-6">
+                <img src={tristar} className="img-fluid" alt="Sponsors dan Supporting"/>
               </div>
             </div>
           </div>
           
         </div>
-      </section> */}
+      </section>
       {/* <!-- /end sponsors & supporting partners --> */}
 
       {/* <!-- footer --> */}

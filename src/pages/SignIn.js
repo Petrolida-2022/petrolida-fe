@@ -38,8 +38,9 @@ const SignIn = () => {
       .catch(err => {
         Swal.fire({
           icon:'error',
-          text: 'Your email and password is not mismatch or not exist'
+          text: 'Your email and password is not mismatch or your account is note exist'
         })
+        setLoading(false)
       })
   }
 
@@ -70,7 +71,7 @@ const SignIn = () => {
                   <input type="password" className="form-input" id="password"  onChange={e => setData({...data, password: e.target.value})}  name="password" placeholder="Enter password"/>
                 </div>
                 <button type="submit" className="form-button d-block ms-auto w-100">{loading ? <Spinner/> : 'Sign In'}</button>
-                <p className="body2 text-center mt-4">Don't have an account? <Link to="/account/sign_up">Sign Up</Link></p>
+                <p className="body2 text-center mt-4">Don't have an account? <Link to="/account/sign_up" className='primary-color'>Sign Up</Link></p>
               </form>
             </div>
           </div>

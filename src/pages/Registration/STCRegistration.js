@@ -77,15 +77,11 @@ const STCRegistration = () => {
     team_name: '',
     university: '',
     phone: '',
-    member1_name: '',
-    member1_email:'',
-    member2_name: '',
-    member2_email: '',
-    member1_phone: '',
-    member2_phone: '',
+    member_name: '',
+    member_email:'',
+    member_phone: '',
     leader_file: '',
-    member1_file: '',
-    member2_file: ''
+    member_file: '',
   })
 
   const dataForm = new FormData()
@@ -203,28 +199,15 @@ const STCRegistration = () => {
                     <h3 className="form-section h7">Team Member 1*</h3>
                     <div className="my-3">
                       <label htmlFor="member1_name" className="form-label">Full Name</label>
-                      <input required type="text" className="form-input" id="member1_name" name="member1_name" onChange={e => setData({...data, member1_name: e.target.value})} tabIndex="7" placeholder="Enter your full name"/>
+                      <input required type="text" className="form-input" id="member1_name" name="member1_name" onChange={e => setData({...data, member_name: e.target.value})} tabIndex="7" placeholder="Enter your full name"/>
                     </div>
                     <div className="my-3">
                       <label htmlFor="member1_email" className="form-label">Email</label>
-                      <input required type="email" className="form-input" id="member1_email" onChange={e => setData({...data, member1_email: e.target.value})} name="member1_email" tabIndex="8" placeholder="Enter your email"/>
+                      <input required type="email" className="form-input" id="member1_email" onChange={e => setData({...data, member_email: e.target.value})} name="member1_email" tabIndex="8" placeholder="Enter your email"/>
                     </div>
                     <div className="my-3">
                       <label htmlFor="member1_phone" className="form-label">Phone Number</label>
-                      <input required type="text" className="form-input" id="member1_phone" name="member1_phone" tabIndex="9" onChange={e => setData({...data, member1_phone: e.target.value})} placeholder="Enter your phone number"/>
-                    </div>
-                    <h3 className="form-section h7">Team Member 2*</h3>
-                    <div className="my-3">
-                      <label htmlFor="member2_name" className="form-label">Full Name</label>
-                      <input required type="text" className="form-input" id="member2_name" onChange={e => setData({...data, member2_name: e.target.value})} name="member2_name" tabIndex="10" placeholder="Enter your full name"/>
-                    </div>
-                    <div className="my-3">
-                      <label htmlFor="member2_email" className="form-label">Email</label>
-                      <input required type="email" className="form-input" id="member2_email" onChange={e => setData({...data, member2_email: e.target.value})} name="member2_email" tabIndex="11" placeholder="Enter your email"/>
-                    </div>
-                    <div className="my-3">
-                      <label htmlFor="member2_phone" className="form-label">Phone Number</label>
-                      <input required type="text" className="form-input" onChange={e => setData({...data, member2_phone: e.target.value})} id="member2_phone" name="member2_phone" tabIndex="12" placeholder="Enter your phone number"/>
+                      <input required type="text" className="form-input" id="member1_phone" name="member1_phone" tabIndex="9" onChange={e => setData({...data, member_phone: e.target.value})} placeholder="Enter your phone number"/>
                     </div>
                     <button type="button" id="secondToDocument" tabIndex="13" className="form-button d-block ms-auto" onClick={() => setForm({...form, second: false, third: true})}>Next Step</button>
                   </div>
@@ -243,22 +226,7 @@ const STCRegistration = () => {
                   </div>
                   <div className="my-3">
                     <label htmlFor="member1_file" className="form-label">Team member 1*</label>
-                    <input required className="form-control" type="file" id="member1_file" name="member1_file" tabIndex="15" accept=".zip,.rar" onChange={e => setData({...data, member1_file: e.target.files[0]})}/>
-                    <small class="text-danger body4">Max 5MB Format zip/rar</small>
-                  </div>
-                  <div className="my-3">
-                    <label htmlFor="member2_file" className="form-label">Team member 2*</label>
-                    <input required className="form-control" type="file" id="member2_file" name="member2_file" tabIndex="16" accept=".zip,.rar" onChange={e => setData({...data, member2_file: e.target.files[0]})}/>
-                    <small class="text-danger body4">Max 5MB Format zip/rar</small>
-                  </div>
-                  <div className="my-3">
-                    <label htmlFor="member2_file" className="form-label">Team member 3*</label>
-                    <input required className="form-control" type="file" id="member2_file" name="member2_file" tabIndex="16" accept=".zip,.rar" onChange={e => setData({...data, member3_file: e.target.files[0]})}/>
-                    <small class="text-danger body4">Max 5MB Format zip/rar</small>
-                  </div>
-                  <div className="my-3">
-                    <label htmlFor="member2_file" className="form-label">Team member 4</label>
-                    <input required className="form-control" type="file" id="member2_file" name="member2_file" tabIndex="16" accept=".zip,.rar" onChange={e => setData({...data, member4_file: e.target.files[0]})}/>
+                    <input required className="form-control" type="file" id="member1_file" name="member1_file" tabIndex="15" accept=".zip,.rar" onChange={e => setData({...data, member_file: e.target.files[0]})}/>
                     <small class="text-danger body4">Max 5MB Format zip/rar</small>
                   </div>
                   <h3 className="form-section h7 mt-4">Upload your Payment</h3>

@@ -26,7 +26,7 @@ const Paper = () => {
     <div className='body'>
       <Navbar/>
 
-      <section className="herobisniscase hero">
+      <section className="heropaper hero">
         <div className="container">
           <div className="hero-title">
             <h1 className="">Paper</h1>
@@ -44,18 +44,22 @@ const Paper = () => {
           </div>
           <div className="row button-info">
             <div className="col-6">
-              <button className="button" data-bs-toggle="modal" data-bs-target="#feedbackModal">
-                <span className=" align-items-center">
-                    <span className=" align-items-center">Guide Book</span>
-                </span>
-              </button>
+              <a href="https://bit.ly/InvitationLetterPETROLIDA2022" target="_blank" rel="noopener noreferrer">
+                <button className="button" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+                  <span className=" align-items-center">
+                      <span className=" align-items-center">Guide Book</span>
+                  </span>
+                </button>
+              </a>
             </div>
             <div className="col-6">
-              <button className="buttonrgster" data-bs-toggle="modal" data-bs-target="#feedbackModal">
-                <span className=" align-items-center">
-                    <span className=" align-items-center">Register</span>
-                </span>
-              </button>
+              <Link to="register">
+                <button className="buttonrgster" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+                  <span className=" align-items-center">
+                      <span >Register</span>
+                  </span>
+                </button>
+              </Link>
             </div>
           </div>  
         </div>
@@ -98,7 +102,7 @@ const Paper = () => {
       <section className="tl" data-aos="fade-up">
         <div className="container stage text-center">
           <h3> Competition Stage</h3>
-          <p className="text-center">This competition will be divided into three stages: Online Preliminary, Semifinal Round, and Final Round</p>
+          <p className="text-center">This competition will be divided into two stages: Preliminary Round and Final ROund</p>
         </div>
         <div className="timeline container">
           <div className="vlpaper"></div>
@@ -175,15 +179,6 @@ const Paper = () => {
                 <p className="body4 cc87" style={{fontWeight: '500px'}}>Competition Presentation Day</p>
               </div>
             </div>
-            <div className="step">
-              <div className="step-icon-wrap">
-                <div className="step-icon "><img src={finalImg} alt="mail"/></div>
-              </div>
-              <div className="information">
-                <p className="body4 cc68" style={{fontWeight: 'normal'}}>May 21st 2022</p>
-                <p className="body4 cc87" style={{fontWeight: '500px'}}>Focus Group Discussion (Final Stage)</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -191,7 +186,7 @@ const Paper = () => {
       <section className="competition-price" data-aos="fade-up">
         <div className="container-sm mx-auto">
           <div className="text-center">
-            <h3 className="title cc87">Competition Price</h3>
+            <h3 className="title cc87">Competition Prize</h3>
             <p className="desc body3 cc68">Winners have a chance to win the prize pool of Rp. 6,000,000, consist of</p>
           </div>
           <div className="price-detail row ">
@@ -270,7 +265,7 @@ const Paper = () => {
                   </h6>
                   <div id="faq-content-2" className="accordion-collapse collapse" data-bs-parent="#faqlist1">
                     <div className="accordion-body">
-                      Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                    Yes you can. However you can also register yourself in a team consist of a maximum 3 people
                     </div>
                   </div>
                   <hr/>
@@ -278,13 +273,13 @@ const Paper = () => {
                 <div className="accordion-item">
                   <h6 className="accordion-header">
                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
-                      Can a team member consist of different universities and majors?
+                    Do I need to submit the full paper at the first stage?
                       <span><img src={accordionImg} alt='wrap'/></span>
                     </button>
                   </h6>
                   <div id="faq-content-3" className="accordion-collapse collapse" data-bs-parent="#faqlist1">
                     <div className="accordion-body">
-                      Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                    
                     </div>
                   </div>
                   <hr/>
@@ -297,7 +292,7 @@ const Paper = () => {
 
       <section className="regist-anounce text-center">
         <h3 className="cc87">Don’t Forget to Register!</h3>
-        <p className="cc68">Don’t miss the ultimate opportunity to showcase your ideas and innovation in reinforcing the a future of our energy industry</p>
+        <p className="cc68">Don’t miss the ultimate opportunity to showcase your ideas and innovation in reinforcing the future of our energy industry</p>
         <Link to="register">
           <button className="buttonrgster" data-bs-toggle="modal" data-bs-target="#feedbackModal">
             <span className=" align-items-center">

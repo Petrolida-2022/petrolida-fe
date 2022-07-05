@@ -45,11 +45,13 @@ const OilRigDesign = () => {
           </div>
           <div className="row button-info">
             <div className="col-6">
-              <button className="button" data-bs-toggle="modal" data-bs-target="#feedbackModal">
-                <span className=" align-items-center">
-                    <span className=" align-items-center">Guide Book</span>
-                </span>
-              </button>
+              <a href="https://bit.ly/InvitationLetterPETROLIDA2022" target="_blank" rel="noopener noreferrer">
+                <button className="button" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+                  <span className=" align-items-center">
+                      <span className=" align-items-center">Guide Book</span>
+                  </span>
+                </button>
+              </a>
             </div>
             <div className="col-6">
             <Link to="register">
@@ -100,7 +102,7 @@ const OilRigDesign = () => {
       <section className="tl" data-aos="fade-up">
         <div className="container stage text-center">
           <h3> Competition Stage</h3>
-          <p className="text-center">This competition will be divided into three stages: Online Preliminary, Semifinal Round, and Final Round</p>
+          <p className="text-center">This competition will be divided into two stages: Preliminary Round and Final Round</p>
         </div>
         <div className="timeline container">
           <div className="vlpaper"></div>
@@ -171,7 +173,7 @@ const OilRigDesign = () => {
       <section className="competition-price" data-aos="fade-up">
         <div className="container-sm mx-auto">
           <div className="text-center">
-            <h3 className="title cc87">Competition Price</h3>
+            <h3 className="title cc87">Competition Prize</h3>
             <p className="desc body3 cc68">Winners have a chance to win the prize pool of Rp. 6,500,000, consist of</p>
           </div>
           <div className="price-detail row ">
@@ -240,7 +242,7 @@ const OilRigDesign = () => {
                   </h6>
                   <div id="faq-content-1" className="accordion-collapse collapse show" data-bs-parent="#faqlist1">
                     <div className="accordion-body">
-                    Lorem
+                    Teams are allowed to present their other files along with judges permission
                     </div>
                   </div>
                   <hr/>
@@ -248,13 +250,28 @@ const OilRigDesign = () => {
                 <div className="accordion-item">
                   <h6 className="accordion-header">
                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
-                      How can Petrolida assure delegates that this competition is fair?
+                      Will committees provide time for discussion in Question and Answer session?
                       <span><img src={accordionImg} alt='wrap'/></span>
                     </button>
                   </h6>
                   <div id="faq-content-2" className="accordion-collapse collapse" data-bs-parent="#faqlist1">
                     <div className="accordion-body">
-                      All participants should open the camera and not allow to turn off the camera video feature in zoom platform and other meet to discuss will be attended by LO, cheating will be disqualified.
+                    There is no specific time for discussion, but it will take time in Question and Answer Session.
+                    </div>
+                  </div>
+                  <hr/>
+                </div>
+                <div className="accordion-item">
+                  <h6 className="accordion-header">
+                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
+                    Is there any tolerance for late submission?
+                      <span><img src={accordionImg} alt='wrap'/></span>
+                    </button>
+                  </h6>
+                  <div id="faq-content-2" className="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                    <div className="accordion-body">
+                    The submission of registration form should not pass the specified deadline.
+
                     </div>
                   </div>
                   <hr/>

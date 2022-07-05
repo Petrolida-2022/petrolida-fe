@@ -22,8 +22,8 @@ const Footer = () => {
             <div className="col-sm-4 col-lg-4 contact">
               <div className="headingtitle"><p>Contact</p></div>
               <div className="information">
-                <p>Mail Us: petrolida@its.ac.id</p>
-                <p>Call Us: +1800 000 0001</p>
+                <p>Mail Us: petrolida2022@gmail.com</p>
+                <p>Call Us: +6287806780002 (Ezra)</p>
               </div>
             </div>
             <div className="col-sm-4 col-lg-4 visit-us">
@@ -36,8 +36,8 @@ const Footer = () => {
             <div className="col-sm-4 col-lg-4 media">
                 <div className="headingtitle"><p>Media</p></div>
                 <div className="information">
-                    <p>Mail Us: petrolida@its.ac.id</p>
-                    <p>Adverise: advertisepetrolida@its.ac.id</p>
+                    <p>Sponsor: sponsorshipetrolida@gmail.com</p>
+                    <p>Media partner: erpetrolida2022@gmail.com</p>
                 </div>
             </div>
           </div>
@@ -47,7 +47,7 @@ const Footer = () => {
 
       <section className="sosmed-info">
         <div className="text-center">
-          <a href="line.me/ti/p/~@petrolida">
+          <a href="https://lin.ee/BFdB4JM">
             <img src={bi_line} alt="Line"/>
           </a>
           <a href="https://www.instagram.com/petrolida2022/">

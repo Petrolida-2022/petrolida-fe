@@ -251,16 +251,6 @@ const CSRegistration = () => {
                     <input required className="form-control" type="file" id="member2_file" name="member2_file" tabIndex="16" accept=".zip,.rar" onChange={e => setData({...data, member2_file: e.target.files[0]})}/>
                     <small class="text-danger body4">Max 5MB Format zip/rar</small>
                   </div>
-                  <div className="my-3">
-                    <label htmlFor="member2_file" className="form-label">Team member 3*</label>
-                    <input required className="form-control" type="file" id="member2_file" name="member2_file" tabIndex="16" accept=".zip,.rar" onChange={e => setData({...data, member3_file: e.target.files[0]})}/>
-                    <small class="text-danger body4">Max 5MB Format zip/rar</small>
-                  </div>
-                  <div className="my-3">
-                    <label htmlFor="member2_file" className="form-label">Team member 4</label>
-                    <input required className="form-control" type="file" id="member2_file" name="member2_file" tabIndex="16" accept=".zip,.rar" onChange={e => setData({...data, member4_file: e.target.files[0]})}/>
-                    <small class="text-danger body4">Max 5MB Format zip/rar</small>
-                  </div>
                   <h3 className="form-section h7 mt-4">Upload your Payment</h3>
                   <a className="payment-button body2 collapsed d-flex align-items-center mt-2" data-bs-toggle="collapse" href="#paymentDestination" role="button" aria-expanded="false" aria-controls="paymentDestination">
                     <img src={chevronDown} className="payment-chevron d-block me-2" alt=""/>

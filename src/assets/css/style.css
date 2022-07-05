@@ -418,6 +418,27 @@ comingsoon-title#comingsoon .comingsoon-image {
   height: 900px;
 }
 
+
+.heropetrosmart {
+  background: linear-gradient(rgba(27, 33, 49, 0.85), #1B2845), url("https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80") no-repeat center;
+  background-size: cover;
+  -o-background-size: cover;
+  height: 900px;
+}
+.heropaper {
+  background: linear-gradient(rgba(27, 33, 49, 0.85), #1B2845), url("https://images.unsplash.com/photo-1511174511562-5f7f18b874f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80") no-repeat center;
+  background-size: cover;
+  -o-background-size: cover;
+  height: 900px;
+}
+.herostc {
+  background: linear-gradient(rgba(27, 33, 49, 0.85), #1B2845), url("https://images.unsplash.com/photo-1629339941379-da30348cdba6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80") no-repeat center;
+  background-size: cover;
+  -o-background-size: cover;
+  height: 900px;
+}
+
+
 .heroawarding {
   background: linear-gradient(rgba(27, 33, 49, 0.85), #1B2845), url("https://images.unsplash.com/photo-1594122230689-45899d9e6f69?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80") no-repeat center;
   background-size: cover;
@@ -1374,7 +1395,7 @@ comingsoon-title#comingsoon .comingsoon-image {
   .timeline .vlpaper {
     position: absolute;
     border-left: 1px dashed rgba(255, 255, 255, 0.38);
-    height: 600px;
+    height: 525px;
     margin-left: 20px;
   }
 
@@ -1805,7 +1826,6 @@ nav ul .btn-dropdown {
 
 nav ul .dropdown-menu li a:hover {
   color: #fff;
-  background-color: #1f7949;
 }
 
 nav ul .btn-group {
@@ -1887,6 +1907,64 @@ nav ul li.account ul li a {
 
 #regis-container .form-indicator .indicator-image.active {
   background-color: #2c8857;
+}
+
+.primary-color{
+  color: #28a562;
+}
+
+a.payment-button {
+  color: #2c8857;
+}
+
+a.payment-button:hover {
+  color: #2c8857;
+}
+
+a.payment-button .payment-chevron {
+  transform: rotate(270deg);
+}
+
+.form-instruction {
+  font: 400 0.875rem/1.5rem "Poppins", sans-serif;
+  letter-spacing: 0.003em;
+  color: inherit;
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.form-button.disabled {
+  filter: grayscale(0.5);
+}
+
+.form-button.disabled:hover {
+  background-color: #2c8857;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.payment {
+  width: 100%;
+  height: 130px;
+  background-color: rgba(255, 255, 255, 0.38);
+  border-radius: 4px;
+}
+
+.payment-logo {
+  width: 75px;
+  max-width: 100%;
+}
+
+.payment-target {
+  font: normal 14px/14px "Poppins", sans-serif;
+  text-align: center;
+  letter-spacing: 0.003em;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.payment-name {
+  font: normal 12px/12px "Poppins", sans-serif;
+  text-align: center;
+  letter-spacing: 0.003em;
+  color: rgba(255, 255, 255, 0.68);
 }
 
 strong {

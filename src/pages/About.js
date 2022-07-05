@@ -58,7 +58,7 @@ const About = () => {
       </div>
 
       <section className={`${style.goalSection} container`}>
-        <h3>What our goals</h3>
+        <h3>Our goals</h3>
         <div className='row justify-content-between p-2'>
           <div className={`col-sm mx-2 position-relative ${style.goal}`} data-aos="fade-right">
             <h3>
@@ -149,17 +149,17 @@ const About = () => {
           <div className='col-sm-6'>
             <span style={{fontSize: '38px'}} className='fw-bold'>Follow Us</span>
             <p className={style.followUs}>
-            Keep up with us through our social media, let’s connect! Don’t miss the ultimate opportunity to showcase your ideas and innovation in reinforcing the a future of our energy industry
+            Keep up with us through our social media, let’s connect! Don’t miss the ultimate opportunity to showcase your ideas and innovation in reinforcing the future of our energy industry
             </p>
           </div>
           <div className={`col-sm-4 d-flex align-items-center justify-content-center ${style.socmedIcon}`}>
-            <a href="#!">
+            <a href="https://lin.ee/BFdB4JM">
               <img src={bi_line} alt="Line"/>
             </a>
-            <a href="#!">
+            <a href="https://www.instagram.com/petrolida2022/">
               <img src={ig} alt="Instagram"/>
             </a>
-            <a href="#!">
+            <a href="https://www.linkedin.com/company/petroleum-integrated-days-petrolida/">
               <img src={linkedin} alt="Linkedin"/>
             </a>
           </div>
